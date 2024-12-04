@@ -2,7 +2,23 @@ Hello every one if any one facing issue to login via ssh.
 using latest parrotos or kali linux use this simple steps to clear these issues.
 Check out resolv
 
+open this file /etc/ssh/ssh_config
 
+add this 2 line in 20  line 
+
+PubkeyAcceptedKeyTypes +ssh-dss
+HostKeyAlgorithms +ssh-dss
+
+open this file /etc/ssh/sshd_config
+
+add this 2 line in 12  line 
+
+PubkeyAcceptedKeyTypes +ssh-dss
+HostKeyAlgorithms +ssh-dss
+          or 
+
+use this cmd
+ssh -oHostKeyAlgorithms=+ssh-dss username@IP
 
 
 
